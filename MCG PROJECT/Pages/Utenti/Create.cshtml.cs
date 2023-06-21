@@ -13,6 +13,7 @@ namespace MCG_PROJECT.Pages.Utenti
 
         public void OnPost() 
         {
+            // tabella Corsisti modificare i campi
             Utentiinfo.Nome;
             Utentiinfo.Cognome;
             Utentiinfo.NomeUtente;

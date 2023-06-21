@@ -1,0 +1,51 @@
+﻿@page
+@model MCG_PROJECT.Pages.Gestione_Documenti.Index1Model
+@{
+}
+<form method="post">
+<div class="container">
+    <div class="row">
+
+        <table class="table table-striped table-hover">
+
+            <thead>
+                <tr>
+                    <th>idCorsista</th>
+                    <th>Cognome</th>
+                    <th>Nome</th>
+                    <th>Carta Identità</th>
+                    <th>Certificato Residenza</th>
+                    <th>Codice Fiscale</th>
+                    <th>CV</th>
+                    <th>Diploma</th>
+                    <th>Idoneità</th>
+                    <th>Patente Guida</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.documentiis)
+                {
+                    <tr>
+                       @*<td>@item.idCorsista</td> questo deve essere un imput *@ 
+                        <td>@item.Cognome</td>
+                        <td>@item.nome</td>
+                        <td>@item.Cartaidentità</td>
+                        <td>@item.CertificatoResidenza</td>
+                        <td>@item.CodiceFiscale</td>
+                        <td>@item.CV</td>
+                        <td>@item.Diploma</td>
+                        <td>@item.Idoneità</td>
+                        <td>@item.PatenteGuida</td>
+                    </tr>
+                }
+
+            </tbody>
+            <tfoot>
+                <a class="nav-link text-dark float-end" asp-area="" asp-page="#">Gestione Documenti</a>
+            </tfoot>
+        </table>
+    </div>
+</div>
+</form>
+

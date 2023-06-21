@@ -6,7 +6,7 @@ namespace MCG_PROJECT.Pages.Utenti
 {
     public class EditModel : PageModel
     {
-        //public List<DocumentiInfo> documentis=new List<DocumentiInfo>();
+        //public List <Corsiinfo> corsiis = new List <Corsiinfo>();
         public void OnGet()
         {
             string idDocumento = Request.Query["idDocumento"];

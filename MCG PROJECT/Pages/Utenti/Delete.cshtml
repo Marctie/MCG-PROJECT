@@ -2,13 +2,13 @@
 @using System.Data.SqlClient
 
     @{
-
+@* tabella corsisti *@
 string id = Request.Query["id"];
 string connessione = "#"
 SqlConnection conn = new SqlConnection (connessione);
 conn. Open();
 SqlCommand cmd = new SqlCommandO;
-cmd.CommandText = "DELETE Users WHERE id-@id";
+cmd.CommandText = "DELETE Corsisti WHERE id-@id";
 cmd.Parameters.AddwithValue("id",id);
 cmd.Connection = con;
 cmd.ExecuteNonQuery();
