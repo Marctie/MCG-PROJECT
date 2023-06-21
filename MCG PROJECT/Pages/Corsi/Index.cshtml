@@ -1,0 +1,41 @@
+﻿@page
+@model MCG_PROJECT.Pages.Corsi.IndexModel
+@{
+}
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <table class="table table-striped table-hover">
+                
+                <thead>
+                    <tr>
+                    <th>idCorso</th>
+                    <th>Codice</th>
+                    <th>Corso</th>
+                    <th>Area</th>
+                    <th>Inzio</th>
+                    <th>Fine</th>
+                    <th>Ente</th>
+                    <th>Stato</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    @foreach(var item in Model.corsiis) {
+                    <tr>
+                        <td>@item.idCorso</td>
+                        <td>@item.Codice</td>
+                        <td>@item.Corso</td>
+                        <td>@item.Area</td>
+                        <td>@item.Inizio</td>
+                        <td>@item.Fine</td>
+                        <td>@item.Ente</td>
+                        <td>@item.Stato</td>
+                    </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

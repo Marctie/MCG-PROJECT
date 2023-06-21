@@ -1,0 +1,74 @@
+﻿@page
+@model MCG_PROJECT.Pages.Login.IndexModel
+@{
+}
+<style>
+    body {
+        background-color: #4c5c7f;
+        /*display: flex;*/
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .login-container {
+        max-width: 400px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            color: #ffffff;
+        }
+
+    .login-button {
+        background-color: #3a73a6;
+    }
+
+    .register-button {
+        background-color: #55a9ee;
+    }
+</style>
+<body>
+    <div style="width: 400px; margin:50px auto;">
+        <div style="text-align: center;">
+            <img src="img/logo_header_mcg_con_scritta.png" alt="MCG" style="width: 150px; height:auto; margin: 20px 20px">
+            </div>
+        <div class="login-container">
+            <h2>Accesso</h2>
+            <form>
+                @*sistemare le textbox in modo che leggano i valori in input *@
+                <div style="margin-bottom: 10px;">
+                    <input type="email" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cccccc;" placeholder="Email" required>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <input type="password" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cccccc;" placeholder="Password" required>
+                </div>
+                @*inserire gli href con i collegamenti alle pagine di login e registrazione con i metodi che scrivono sul db *@
+                <button class="login-button" style="width: 100%; padding: 10px; border-radius: 5px; border: none; color: #ffffff; margin: 10px 0px;" type="submit">Login</button>
+                <button class="register-button" style="width: 100%; padding: 10px; border-radius: 5px; border: none; color: #ffffff;margin: 10px 0px;" type="submit"><a style="text-decoration:none; color:#fff;" href="SignUp/index">Registrati</a></button>
+            </form>
+        </div>
+    </div>
+
+</body>
