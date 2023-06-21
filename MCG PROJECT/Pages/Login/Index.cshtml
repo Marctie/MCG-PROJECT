@@ -56,18 +56,23 @@
             </div>
         <div class="login-container">
             <h2>Accesso</h2>
-            <form>
+            <form method="POST">
                 @*sistemare le textbox in modo che leggano i valori in input *@
+                @*Email*@
                 <div style="margin-bottom: 10px;">
-                    <input type="email" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cccccc;" placeholder="Email" required>
+                    <label for="username">Username:</label>
+                    <input style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cccccc;" type="text" id="username" name="username" required>
                 </div>
+                @*password*@
                 <div style="margin-bottom: 10px;">
-                    <input type="password" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cccccc;" placeholder="Password" required>
+                    <label for="password">Password:</label>
+                    <input style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cccccc;"  type="password" id="password" name="password" required>
                 </div>
                 @*inserire gli href con i collegamenti alle pagine di login e registrazione con i metodi che scrivono sul db *@
                 <button class="login-button" style="width: 100%; padding: 10px; border-radius: 5px; border: none; color: #ffffff; margin: 10px 0px;" type="submit">Login</button>
                 <button class="register-button" style="width: 100%; padding: 10px; border-radius: 5px; border: none; color: #ffffff;margin: 10px 0px;" type="submit"><a style="text-decoration:none; color:#fff;" href="SignUp/index">Registrati</a></button>
             </form>
+
         </div>
     </div>
 

@@ -4,4 +4,14 @@
     ViewData["Title"] = "Home page";
 }
 
- 
+<section style="background-color: #4c5c7f; padding: 20px;">
+    @*inserimento logo homepage*@
+    <img src="/img/logo_header_mcg_con_scritta.png" alt="Logo" style="display: block; margin: 0 auto; max-width: 200px; height: auto;">
+    <h2 style="text-align: center; margin-bottom: 20px; color: #ffffff;">Benvenuto nel nostro programma di gestione utenti</h2>
+    <p style="text-align: center; font-size: 16px; color: #ffffff;">Gestisci facilmente gli utenti del tuo sistema con il nostro programma intuitivo.</p>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <a asp-page="Login/index" style="display: inline-block; padding: 10px 20px; background-color: #3a73a6; color: #ffffff; text-decoration: none; border-radius: 5px;">Login</a>
+        <a asp-page="SignUp/index" style="display: inline-block; padding: 10px 20px; background-color: #ffa500; color: #ffffff; text-decoration: none; border-radius: 5px; margin-left: 10px;">Registrati</a>
+    </div>
+</section>
+
