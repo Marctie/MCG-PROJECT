@@ -1,0 +1,31 @@
+﻿@page
+@model MCG_PROJECT.Pages.Corsi.EditModel
+@{
+}
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="card m-2">
+
+                <div class="card-body">
+                    <label>Codice</label>
+                    <input name="textboxCodice" value="@Model.corsi.Codice" class="form-control text-muted" />
+                    <label>Corso</label>
+                    <input name="textboxCorso" value="@Model.corsi.Corso" class="form-control text-muted" />
+                    <label>Area</label>
+                    <input name="textboxArea" value="@Model.corsi.Area" class="form-control text-muted" />
+                    <label>Data Inizio</label>
+                    <input name="textboxInizio" value="@Model.corsi.Inizio" class="form-control text-muted" />
+                    <label>Data Fine</label>
+                    <input name="textboxFine" value="@Model.corsi.Fine" class="form-control text-muted" />
+                    <label>Ente</label>
+                    <input name="textboxEnte" value="@Model.corsi.Ente" class="form-control text-muted" />
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary">CREATE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

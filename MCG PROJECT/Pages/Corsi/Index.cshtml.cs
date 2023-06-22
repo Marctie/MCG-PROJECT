@@ -7,12 +7,9 @@ namespace MCG_PROJECT.Pages.Corsi
 {
     public class IndexModel : PageModel
     {
-
         public List <Corsiinfo> corsiis = new List <Corsiinfo>();
-
         public void OnGet()
         {
-            //la stringa successiva è da cambiare appena pronto il db (attendere Marco)
             string connessione = "Server=DESKTOP-UOEE9EA\\SQLEXPRESS;Database=MCGCorsi;Trusted_Connection=true;";
             string strSQL = "select idCorso, Codice, Corso, Area, CONVERT(nvarchar(10),DataInizio, 103) Inizio, CONVERT(nvarchar(10),DataFine, 103) Fine, Ente, Stato from Corsi Order by Corso";
             SqlConnection con = new SqlConnection(connessione);
@@ -24,7 +21,6 @@ namespace MCG_PROJECT.Pages.Corsi
             while (reader.Read())
             {
                 Corsiinfo infocorsi = new Corsiinfo();
-                //qua vanno inserite le variabili derivate dal database (attendere Marco)
                 infocorsi.idCorso = reader.GetInt32(0);
                 infocorsi.Codice = reader.GetString(1);
                 infocorsi.Corso = reader.GetString(2);

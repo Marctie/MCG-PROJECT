@@ -31,9 +31,22 @@
                         <td>@item.Fine</td>
                         <td>@item.Ente</td>
                         <td>@item.Stato</td>
+                            <td><a href="/Corsi/Update?idCorso=@item.idCorso" class="nav-link text-dark float-end" >Modifica Corso</a></td>
+                        <td>@item.Stato</td>
                     </tr>
                     }
                 </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="13">
+                            <a class="nav-link text-dark float-end" asp-area="" asp-page="#">Gestione Documenti</a>
+                            
+                            <a class="nav-link text-dark float-end" asp-area="" asp-page="/Corsi/Insert">Inserisci Corso</a>
+
+                        </td>
+                    </tr>
+                </tfoot>
 
             </table>
         </div>

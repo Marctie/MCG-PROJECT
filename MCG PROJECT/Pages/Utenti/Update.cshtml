@@ -1,0 +1,42 @@
+﻿@page
+@model MCG_PROJECT.Pages.Utenti.CreateModel
+@{
+}
+<form method="post">
+    <label>CodiceFiscale</label>
+    <input name="textboxCodiceFiscale" value="@Model.info.CodiceFiscale" />
+    <div class="container">
+        <div class="row">
+            <div class="card m-2">
+
+                <div class="card-body">
+                    <label>Cognome</label> 
+                    <input name="textboxCognome" value="@Model.info.Cognome" class="form-control text-muted" />
+                    <label>Nome</label>
+                    <input name="textboxNome" value="@Model.info.Nome" class="form-control text-muted" />
+                    <label>Data Nascitaa</label>
+                    <input name="textboxDataNascita" value="@Model.info.DataNascita" class="form-control text-muted" />
+                    <label>Luogo Nascita</label>
+                    <input name="textboxLuogoNascita" value="@Model.info.LuogoNascita" class="form-control text-muted" />
+                    <label>Indirizzo</label>
+                    <input name="textboxIndirizzo" value="@Model.info.Indirizzo" class="form-control text-muted" />
+                    <label>CAP</label>
+                    <input name="textboxCAP" value="@Model.info.CAP" class="form-control text-muted" />
+                    <label>Citta</label>
+                    <input name="textboxCitta" value="@Model.info.Citta" class="form-control text-muted" />
+                    <label>Provincia</label>
+                    <input name="textboxProvincia" value="@Model.info.Provincia" class="form-control text-muted" />
+                    <label>Nazione</label>
+                    <input name="textboxNazione" value="@Model.info.Nazione" class="form-control text-muted" />
+                    <label>Email</label>
+                    <input name="textboxemail" value="@Model.info.email" class="form-control text-muted" />
+                    <label>Password</label>
+                    <input name="textboxpsw" value="@Model.info.psw" class="form-control text-muted" />
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary">CREATE</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

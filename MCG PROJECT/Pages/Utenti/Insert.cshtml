@@ -1,0 +1,46 @@
+﻿@page
+@model MCG_PROJECT.Pages.Utenti.InsertModel
+@{
+}
+
+
+<form method="post">
+    <label>Codice Fiscale</label>
+    <input name="textboxCodiceFiscale" value="@Model.info.CodiceFiscale" />
+    <div class="container">
+        <div class="row">
+            <div class="card m-2">
+                <div class="card-header">
+                    Insert User
+                </div>
+                <div class="card-body">
+                    <label>Cognome</label>
+                    <input name="textboxCognome" text="" class="form-control text-muted" />
+                    <label>Nome</label>
+                    <input name="textboxNome" text="" class="form-control text-muted" />
+                    <label>Data Nascita</label>
+                    <input name="textboxDataNascita" text="" class="form-control text-muted" />
+                    <label>Luogo Nascita</label>
+                    <input name="textboxLuogoNascita" text="" class="form-control text-muted" />
+                    <label>Indirizzo</label>
+                    <input name="textboxIndirizzo" text="" class="form-control text-muted" />
+                    <label>CAP</label>
+                    <input name="textboxCAP" text="" class="form-control text-muted" />
+                    <label>Città</label>
+                    <input name="textboxCitta" text="" class="form-control text-muted" />
+                    <label>Provincia</label>
+                    <input name="textboxProvincia" text="" class="form-control text-muted" />
+                    <label>Nazione</label>
+                    <input name="textboxNazione" text="" class="form-control text-muted" />
+                    <label>Email</label>
+                    <input name="textboxemail" text="" class="form-control text-muted" />
+                    <label>Password</label>
+                    <input name="textboxpsw" text="" class="form-control text-muted" />
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary">CREATE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

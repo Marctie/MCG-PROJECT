@@ -1,6 +1,8 @@
 ﻿@page
+
 @model MCG_PROJECT.Pages.Gestione_Documenti.Index1Model
 @{
+
 }
 <form method="post">
 <div class="container">
@@ -20,8 +22,7 @@
                     <th>Patente Guida</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach (var item in Model.documentiis)
+              @*  @foreach (var item in Model.documentiis)
                 {
                     <tr>
                        <td>@item.idCorsista</td> questo deve essere un imput 
@@ -35,8 +36,17 @@
                         <td>@item.Idoneità</td>
                         <td>@item.PatenteGuida</td>
                     </tr>
-                }
-            </tbody>
+                }*@
+                        htmlBuilder.Append("<tbody> <tr>");
+                        htmlBuilder.Append("<th>idCorsista</th>");
+                        htmlBuilder.Append("<th>Cognome</th>");
+                        htmlBuilder.Append("<th>Nome</th>");
+                        @foreach (string columnName in Model.columnNames)
+                        {
+                        htmlBuilder.AppendFormat("<th>{0}</th>", columnName);
+                        }
+                        htmlBuilder.Append("</tr> </tbody>");
+
             <tfoot>
                 <a class="nav-link text-dark float-end" asp-area="" asp-page="#">Gestione Documenti</a>
             </tfoot>

@@ -8,14 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Utenti\Create.cshtml.cs" />
-    <Compile Remove="Pages\Utenti\Edit.cshtml.cs" />
+    <Compile Remove="Pages\Gestione_Documenti\**" />
+    <Content Remove="Pages\Gestione_Documenti\**" />
+    <EmbeddedResource Remove="Pages\Gestione_Documenti\**" />
+    <None Remove="Pages\Gestione_Documenti\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Utenti\Create.cshtml" />
+    <Compile Remove="Pages\Utenti\Edit.cshtml.cs" />
+    <Compile Remove="Pages\Utenti\Update.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Pages\Utenti\Delete.cshtml" />
     <Content Remove="Pages\Utenti\Edit.cshtml" />
+    <Content Remove="Pages\Utenti\Update.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

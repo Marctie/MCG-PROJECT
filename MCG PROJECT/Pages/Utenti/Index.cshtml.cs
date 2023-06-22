@@ -9,7 +9,7 @@ namespace MCG_PROJECT.Pages.Utenti
     public class IndexModel : PageModel
     {
         //metodo per leggere i dati nel DB 
-        public List <Utentiinfo> utentis = new List<Utentiinfo> ();
+        public List<Utentiinfo> utentis = new List<Utentiinfo> ();
         public void OnGet()
         {
 //la stringa successiva è da cambiare appena pronto il db (attendere Marco)
@@ -21,6 +21,7 @@ namespace MCG_PROJECT.Pages.Utenti
             cmd.CommandText = strSQL;
             cmd.Connection = con; 
             SqlDataReader reader= cmd.ExecuteReader();
+            
             while (reader.Read())
             {
                 Utentiinfo info = new Utentiinfo();
