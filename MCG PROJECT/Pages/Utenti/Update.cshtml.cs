@@ -14,12 +14,13 @@ namespace MCG_PROJECT.Pages.Utenti
         {
             string CF = Request.Query["CodiceFiscale"];
             string connessione = "Server=DESKTOP-UOEE9EA\\SQLEXPRESS;Database=MCGCorsi;Trusted_Connection=true";
-            string strSQL = "select CodiceFiscale, Cognome, Nome, CONVERT(nvarchar(10),DataNascita, 103) DataNascita, LuogoNascita, Indirizzo, CAP, Citta, Provincia, Nazione, email, psw, Stato from Corsisti ";
+            string strSQL = "select CodiceFiscale, Cognome, Nome, CONVERT(nvarchar(10),DataNascita, 103) DataNascita, LuogoNascita, Indirizzo, CAP, Citta, Provincia, Nazione, email, psw, Stato from Corsisti WHERE CodiceFiscale=@CF";
             SqlConnection con = new SqlConnection(connessione);
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = strSQL;
             cmd.Connection = con;
+            cmd.Parameters.AddWithValue("CF", CF);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {

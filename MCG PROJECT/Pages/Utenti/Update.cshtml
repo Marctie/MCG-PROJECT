@@ -2,35 +2,36 @@
 @model MCG_PROJECT.Pages.Utenti.CreateModel
 @{
 }
-<form method="post">
+<form method="post" >
     <div class="container">
         <div class="row">
             <div class="card m-2">
                 <div class="card-body">
-                    @foreach (var item in Model.utentis){
-                        <label>Cognome</label>
-                    <input name="textboxCognome" value="@item.Cognome" class="form-control text-muted" /> 
-                    <label>Nome</label>
-                    <input name="textboxNome" value="@item.Nome" class="form-control text-muted" />
-                    <label>Data Nascita</label>
-                    <input name="textboxDataNascita" value="@item.DataNascita" class="form-control text-muted" />
-                    <label>Luogo Nascita</label>
-                    <input name="textboxLuogoNascita" value="@item.LuogoNascita" class="form-control text-muted" />
-                    <label>Indirizzo</label>
-                    <input name="textboxIndirizzo" value="@item.Indirizzo" class="form-control text-muted" />
-                    <label>CAP</label>
-                    <input name="textboxCAP" value="@item.CAP" class="form-control text-muted" />
-                    <label>Citta</label>
-                    <input name="textboxCitta" value="@item.Citta" class="form-control text-muted" />
-                    <label>Provincia</label>
-                    <input name="textboxProvincia" value="@item.Provincia" class="form-control text-muted" />
-                    <label>Nazione</label>
-                    <input name="textboxNazione" value="@item.Nazione" class="form-control text-muted" />
-                    <label>Email</label>
-                    <input name="textboxemail" value="@item.email" class="form-control text-muted" />
-                    <label>Password</label>
-                    <input name="textboxpsw" value="@item.psw" class="form-control text-muted" />
-                    }
+                    @foreach (var item in Model.utentis)
+                    {
+                            <label>Cognome</label>
+                            <input name="textboxCognome" value="@item.Cognome"  class="form-control text-muted" /> 
+                            <label>Nome</label>
+                            <input name="textboxNome" value="@item.Nome" class="form-control text-muted" />
+                            <label>Data Nascita</label>
+                            <input name="textboxDataNascita" value="@item.DataNascita" class="form-control text-muted" />
+                            <label>Luogo Nascita</label>
+                            <input name="textboxLuogoNascita" value="@item.LuogoNascita" class="form-control text-muted" />
+                            <label>Indirizzo</label>
+                            <input name="textboxIndirizzo" value="@item.Indirizzo" class="form-control text-muted" />
+                            <label>CAP</label>
+                            <input name="textboxCAP" value="@item.CAP" class="form-control text-muted" />
+                            <label>Citta</label>
+                            <input name="textboxCitta" value="@item.Citta" class="form-control text-muted" />
+                            <label>Provincia</label>
+                            <input name="textboxProvincia" value="@item.Provincia" class="form-control text-muted" />
+                            <label>Nazione</label>
+                            <input name="textboxNazione" value="@item.Nazione" class="form-control text-muted" />
+                            <label>Email</label>
+                            <input name="textboxemail" value="@item.email" class="form-control text-muted" />
+                            <label>Password</label>
+                            <input name="textboxpsw" value="@item.psw" class="form-control text-muted" />
+                        }    
                     <div class="card-footer">
                     <button class="btn btn-outline-primary">CREATE</button> 
                 </div>
