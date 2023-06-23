@@ -40,7 +40,7 @@
                         <td>@item.email</td>
                         <td>@item.psw</td>
                         <td>@item.Stato</td>
-                        <td><a href="/Utenti/Delete?CodiceFiscale=@item.CodiceFiscale" class="nav-link text-dark float-end">Elimina</a></td>
+                        <td><a href="/Utenti/Delete?CodiceFiscale=@item.CodiceFiscale" class="nav-link text-dark float-end">Delete</a></td>
                         <td><a href="/Utenti/Update?CodiceFiscale=@item.CodiceFiscale" class="nav-link text-dark float-end">Edit</a></td>
                     </tr>
                 }
@@ -50,7 +50,7 @@
                     <td colspan="13">
                         <a class="nav-link text-dark float-end" asp-area="" asp-page="#">Gestione Documenti</a>
                         
-                        <a class="nav-link text-dark float-end" asp-area="" asp-page="/Utenti/Insert">Inserisci Corsista</a>
+                        <a class="btn btn-primary float-end" asp-area="" asp-page="/Utenti/Insert">+</a>
                         
                     </td>
                 </tr>

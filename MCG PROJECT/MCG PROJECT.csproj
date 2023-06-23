@@ -8,13 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Gestione_Documenti\**" />
-    <Content Remove="Pages\Gestione_Documenti\**" />
-    <EmbeddedResource Remove="Pages\Gestione_Documenti\**" />
-    <None Remove="Pages\Gestione_Documenti\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Pages\Utenti\Edit.cshtml.cs" />
   </ItemGroup>
 
@@ -31,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Gestione_Documenti\index.cshtml" />
     <None Include="wwwroot\img\logo_header_mcg_con_scritta.png" />
     <None Include="wwwroot\img\MCG.png" />
   </ItemGroup>

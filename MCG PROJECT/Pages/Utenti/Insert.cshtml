@@ -5,42 +5,66 @@
 
 
 <form method="post">
-    <label>Codice Fiscale</label>
-    <input name="textboxCodiceFiscale" value="@Model.info.CodiceFiscale" />
-    <div class="container">
+<div class="container">
         <div class="row">
-            <div class="card m-2">
-                <div class="card-header">
-                    Insert User
+            <h3>Inserisci Corsista</h3>
+                    <div class="col-lg-12" style="margin: 0 auto">
+                        <label>Codice Fiscale</label>
+                                <input style="width:60%; text-align:center; margin:0 auto;" name="textboxCodiceFiscale" value="@Model.info.CodiceFiscale" />
+                            </div>
+                    
+                        <div class="col-lg-6 my-4">
+                            <label>Cognome</label>
+                <input style="width:50%" name="textboxCognome" text="" class="" />
+                            </div>
+                        
+                            <div class="col-6 my-4">
+                                <label>Nome</label>
+                <input style="width:50%" name="textboxNome" text="" class="" />
+            </div>
+                        
+                        
+                    <div class="col-12"><label>Data Nascita</label></div>
+                    <input name="textboxDataNascita" text="" class="" />
+                    <div class="col-12">
+                        <label>Luogo Nascita</label>
+                    </div>
+                    <input name="textboxLuogoNascita" text="" class="" />
+                        <div class="col-12">
+                        <label>Indirizzo</label>
+                    </div>
+                    <input name="textboxIndirizzo" text="" class="" />
+                            <div class="col-12">
+                        <label>CAP</label>
+                    </div>
+                    <input name="textboxCAP" text="" class="" />
+                                <div class="col-12">
+                        <label>Città</label>
+                    </div>
+                    <input name="textboxCitta" text="" class="" />
+                                    <div class="col-12">
+                        <label>Provincia</label>
+                    </div>
+                    <input name="textboxProvincia" text="" class="" />
+                                        <div class="col-12">
+                        <label>Nazione</label>
+                    </div>
+                    <input name="textboxNazione" text="" class="" />
+                                            <div class="col-12">
+                        <label>Email</label>
+                    </div>
+                    <input name="textboxemail" text="" class="" />
+                                                <div class="col-12">
+                        <label>Password</label>
+                    </div>
+                    <input name="textboxpsw" text="" class="" />
                 </div>
-                <div class="card-body">
-                    <label>Cognome</label>
-                    <input name="textboxCognome" text="" class="form-control text-muted" />
-                    <label>Nome</label>
-                    <input name="textboxNome" text="" class="form-control text-muted" />
-                    <label>Data Nascita</label>
-                    <input name="textboxDataNascita" text="" class="form-control text-muted" />
-                    <label>Luogo Nascita</label>
-                    <input name="textboxLuogoNascita" text="" class="form-control text-muted" />
-                    <label>Indirizzo</label>
-                    <input name="textboxIndirizzo" text="" class="form-control text-muted" />
-                    <label>CAP</label>
-                    <input name="textboxCAP" text="" class="form-control text-muted" />
-                    <label>Città</label>
-                    <input name="textboxCitta" text="" class="form-control text-muted" />
-                    <label>Provincia</label>
-                    <input name="textboxProvincia" text="" class="form-control text-muted" />
-                    <label>Nazione</label>
-                    <input name="textboxNazione" text="" class="form-control text-muted" />
-                    <label>Email</label>
-                    <input name="textboxemail" text="" class="form-control text-muted" />
-                    <label>Password</label>
-                    <input name="textboxpsw" text="" class="form-control text-muted" />
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-outline-primary">CREATE</button>
+                <div class="card-footer m-2">
+                    <button class="btn btn-outline-primary">Insert</button>
                 </div>
             </div>
+            </div>
         </div>
+    </div>
     </div>
 </form>
