@@ -1,17 +1,15 @@
 ﻿@page
 @using System.Data.SqlClient
-
-    @{
-@* tabella corsisti *@
-string id = Request.Query["id"];
-string connessione = "#"
+ @{
+string CF = Request.Query["CodiceFiscale"];
+string connessione = "Server=DESKTOP-UOEE9EA\\SQLEXPRESS;Database=MCGCorsi;Trusted_Connection=true";
 SqlConnection conn = new SqlConnection (connessione);
-conn. Open();
-SqlCommand cmd = new SqlCommandO;
-cmd.CommandText = "DELETE Corsisti WHERE id-@id";
-cmd.Parameters.AddwithValue("id",id);
-cmd.Connection = con;
+conn.Open();
+SqlCommand cmd = new SqlCommand();
+cmd.CommandText = "DELETE Corsisti WHERE CodiceFiscale=@CodiceFiscale";
+cmd.Parameters.AddWithValue("CodiceFiscale",CF);
+cmd.Connection = conn;
 cmd.ExecuteNonQuery();
-con.Close();
+conn.Close();
 Response.Redirect("/Utenti");
 }
