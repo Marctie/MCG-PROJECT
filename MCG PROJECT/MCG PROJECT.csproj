@@ -16,12 +16,10 @@
 
   <ItemGroup>
     <Compile Remove="Pages\Utenti\Edit.cshtml.cs" />
-    <Compile Remove="Pages\Utenti\Update.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="Pages\Utenti\Edit.cshtml" />
-    <Content Remove="Pages\Utenti\Update.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

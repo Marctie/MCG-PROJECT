@@ -3,37 +3,35 @@
 @{
 }
 <form method="post">
-    <label>CodiceFiscale</label>
-    <input name="textboxCodiceFiscale" value="@Model.info.CodiceFiscale" />
     <div class="container">
         <div class="row">
             <div class="card m-2">
-
                 <div class="card-body">
-                    <label>Cognome</label> 
-                    <input name="textboxCognome" value="@Model.info.Cognome" class="form-control text-muted" />
+                    @foreach (var item in Model.utentis){
+                        <label>Cognome</label>
+                    <input name="textboxCognome" value="@item.Cognome" class="form-control text-muted" /> 
                     <label>Nome</label>
-                    <input name="textboxNome" value="@Model.info.Nome" class="form-control text-muted" />
-                    <label>Data Nascitaa</label>
-                    <input name="textboxDataNascita" value="@Model.info.DataNascita" class="form-control text-muted" />
+                    <input name="textboxNome" value="@item.Nome" class="form-control text-muted" />
+                    <label>Data Nascita</label>
+                    <input name="textboxDataNascita" value="@item.DataNascita" class="form-control text-muted" />
                     <label>Luogo Nascita</label>
-                    <input name="textboxLuogoNascita" value="@Model.info.LuogoNascita" class="form-control text-muted" />
+                    <input name="textboxLuogoNascita" value="@item.LuogoNascita" class="form-control text-muted" />
                     <label>Indirizzo</label>
-                    <input name="textboxIndirizzo" value="@Model.info.Indirizzo" class="form-control text-muted" />
+                    <input name="textboxIndirizzo" value="@item.Indirizzo" class="form-control text-muted" />
                     <label>CAP</label>
-                    <input name="textboxCAP" value="@Model.info.CAP" class="form-control text-muted" />
+                    <input name="textboxCAP" value="@item.CAP" class="form-control text-muted" />
                     <label>Citta</label>
-                    <input name="textboxCitta" value="@Model.info.Citta" class="form-control text-muted" />
+                    <input name="textboxCitta" value="@item.Citta" class="form-control text-muted" />
                     <label>Provincia</label>
-                    <input name="textboxProvincia" value="@Model.info.Provincia" class="form-control text-muted" />
+                    <input name="textboxProvincia" value="@item.Provincia" class="form-control text-muted" />
                     <label>Nazione</label>
-                    <input name="textboxNazione" value="@Model.info.Nazione" class="form-control text-muted" />
+                    <input name="textboxNazione" value="@item.Nazione" class="form-control text-muted" />
                     <label>Email</label>
-                    <input name="textboxemail" value="@Model.info.email" class="form-control text-muted" />
+                    <input name="textboxemail" value="@item.email" class="form-control text-muted" />
                     <label>Password</label>
-                    <input name="textboxpsw" value="@Model.info.psw" class="form-control text-muted" />
-                </div>
-                <div class="card-footer">
+                    <input name="textboxpsw" value="@item.psw" class="form-control text-muted" />
+                    }
+                    <div class="card-footer">
                     <button class="btn btn-outline-primary">CREATE</button> 
                 </div>
             </div>

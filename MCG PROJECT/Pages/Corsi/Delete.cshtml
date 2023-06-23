@@ -6,10 +6,10 @@
     SqlConnection conn = new SqlConnection(connessione);
     conn.Open();
     SqlCommand cmd = new SqlCommand();
-    cmd.CommandText = "Delete Corso Where idCorso=@idCorso";
+    cmd.CommandText = "DELETE Corsi WHERE idCorso=@idCorso";
     cmd.Parameters.AddWithValue("idCorso", idCorso);
     cmd.Connection = conn;
     cmd.ExecuteNonQuery();
     conn.Close();
-    Response.Redirect("Corsi/Index");
+    Response.Redirect("/Index");
 }

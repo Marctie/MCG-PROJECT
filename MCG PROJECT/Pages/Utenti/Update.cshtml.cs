@@ -12,9 +12,9 @@ namespace MCG_PROJECT.Pages.Utenti
 
         public void OnGet()
         {
-            
+            string CF = Request.Query["CodiceFiscale"];
             string connessione = "Server=DESKTOP-UOEE9EA\\SQLEXPRESS;Database=MCGCorsi;Trusted_Connection=true";
-            string strSQL = "select CodiceFiscale, Cognome, Nome, CONVERT(nvarchar(10),DataNascita, 103) DataNascita, LuogoNascita, Indirizzo, CAP, Citta, Provincia, Nazione, email, psw, Stato from Corsisti";
+            string strSQL = "select CodiceFiscale, Cognome, Nome, CONVERT(nvarchar(10),DataNascita, 103) DataNascita, LuogoNascita, Indirizzo, CAP, Citta, Provincia, Nazione, email, psw, Stato from Corsisti ";
             SqlConnection con = new SqlConnection(connessione);
             con.Open();
             SqlCommand cmd = new SqlCommand();
@@ -23,7 +23,6 @@ namespace MCG_PROJECT.Pages.Utenti
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-
                 Utentiinfo info = new Utentiinfo();
                 info.CodiceFiscale = reader.GetString(0);
                 info.Cognome = reader.GetString(1);
@@ -46,8 +45,6 @@ namespace MCG_PROJECT.Pages.Utenti
         public void OnPost()
         {
             // tabella Corsisti modificare i campi
-
-            info.CodiceFiscale = Request.Form["textboxCodiceFiscale"];
             info.Cognome = Request.Form["textboxCognome"];
             info.Nome = Request.Form["textboxNome"];
             info.DataNascita = Request.Form["textboxDataNascita"];
@@ -59,9 +56,9 @@ namespace MCG_PROJECT.Pages.Utenti
             info.Nazione = Request.Form["textboxNazione"];
             info.email = Request.Form["textboxemail"];
             info.psw = Request.Form["textboxpsw"];
-       
 
-            
+
+            string CF = Request.Query["CodiceFiscale"];
             string connessione = "Server=DESKTOP-UOEE9EA\\SQLEXPRESS;Database=MCGCorsi;Trusted_Connection=true";
             string strSQL = "UPDATE Corsisti SET Cognome=@Cognome, Nome=@Nome, DataNascita=@DataNascita, LuogoNascita=@LuogoNascita, Indirizzo=@Indirizzo, CAP=@CAP, Citta=@Citta, Provincia=@Provincia, Nazione=@Nazione, email=@email, psw=@psw, Stato=2 WHERE CodiceFiscale=@CodiceFiscale";
             SqlConnection conn = new SqlConnection(connessione);
@@ -69,7 +66,7 @@ namespace MCG_PROJECT.Pages.Utenti
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = strSQL;
 
-            cmd.Parameters.AddWithValue("CodiceFiscale", info.CodiceFiscale);
+            cmd.Parameters.AddWithValue("CodiceFiscale", CF);
             cmd.Parameters.AddWithValue("Cognome", info.Cognome);
             cmd.Parameters.AddWithValue("Nome", info.Nome);
             cmd.Parameters.AddWithValue("DataNascita", info.DataNascita);
@@ -84,7 +81,7 @@ namespace MCG_PROJECT.Pages.Utenti
             cmd.Parameters.AddWithValue("Stato", 2);
             cmd.Connection = conn;
             cmd.ExecuteNonQuery();
-            // Response.Redirect("/Utenti");
+            Response.Redirect("/Utenti/Index");
             conn.Close();
         }
     }
